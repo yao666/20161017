@@ -26,5 +26,11 @@ namespace work.Controllers
 
             return View();
         }
+        public ActionResult yao()
+        {
+            
+
+            return View();
+        }
     }
 }
