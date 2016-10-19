@@ -5,13 +5,19 @@
     var b = 20;
     int v = 100;
 }
+@{ ViewBag.Title = "List";
+    var newList = ViewBag.data as string[];
+    }
+
 
 <!DOCTYPE html>
 
 <html>
 <head>
+
     <meta name="viewport" content="width=device-width" />
     <title>yao</title>
+    
 </head>
 <body>
     <div>
@@ -19,7 +25,11 @@
         <div>结果：@ViewBag.sum</div>
         <div>@(a+b)</div>
         <div>@("TIME:" +DateTime.Now.ToString())</div>
-   
+       <div><ol>
+           @foreach (var item in newList)
+           { <li>@item </li>}
+
+           </ol></div>
 
     </div>
 </body>
