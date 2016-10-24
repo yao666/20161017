@@ -7,6 +7,11 @@
 }
 @{ ViewBag.Title = "List";
     var newList = ViewBag.data as string[];
+    var curpage = (int)ViewBag.Page;
+    var start = curpage - 3;
+}
+
+
     }
 
 
@@ -14,7 +19,7 @@
 
 <html>
 <head>
-
+    <h3> 第 @ViewBag.Page 页 </h3>
     <meta name="viewport" content="width=device-width" />
     <title>yao</title>
     
@@ -30,6 +35,17 @@
            { <li>@item </li>}
 
            </ol></div>
+        <ol>
+            @for (int i = start; i < curpage + 3; i++)
+            {
+                <li>
+                    @*<a href="/Home/List?Page=@i"> 第 @i页</a>*@
+                    @Html.ActionLink(string.Format("第{0}页", i), "yao", "Home", new { page = i }, null)
+                </li>
+            }
+
+
+        </ol>
 
     </div>
 </body>

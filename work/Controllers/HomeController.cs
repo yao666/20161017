@@ -26,7 +26,7 @@ namespace work.Controllers
 
             return View();
         }
-        public ActionResult yao()
+        public ActionResult yao(int page=10)
         {
             string[] data = new string[] {  "(2016-10-19) 广西日报头版：桂林电子科技大学为广西捧回金杯 ",
                                             "(2016-10-18)机电工程系举办拔河比赛",
@@ -35,6 +35,7 @@ namespace work.Controllers
                                             "(2016-10-17) 广州时代地产营销学院执行院长胡可德讲座通知 " };
 
             ViewBag.data = data;
+            ViewBag.Page = page;
    
             return View();
         }
