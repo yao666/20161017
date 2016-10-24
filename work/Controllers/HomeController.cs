@@ -38,5 +38,17 @@ namespace work.Controllers
    
             return View();
         }
+        public ActionResult Add()
+        {
+           
+
+            return View();
+        }
+        public ActionResult Save(string title,string content)
+        {
+            ViewBag.TTitle = title;
+            ViewBag.Content = content;
+            return View();
+        }
     }
 }
