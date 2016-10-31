@@ -1,4 +1,5 @@
-﻿using System;
+﻿using News;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -51,5 +52,14 @@ namespace work.Controllers
             ViewBag.Content = content;
             return View();
         }
+        public ActionResult Show(int id)
+        {
+            var db = new BlogDatabase();
+            var article = db.BlogArticles.First(o => o.Id == id);
+
+            ViewData.Model = article;
+            return View();
+        }
+
     }
 }
