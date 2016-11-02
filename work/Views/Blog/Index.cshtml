@@ -1,14 +1,14 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    var articles = ViewBag.BlogArticles as List<BlogArticle>;
+    var art = ViewBag.BlogArticles as List<BlogArticle>;
 
 }
 
 <h2>博客</h2>
 
 <ol>
-    @foreach (var item in articles)
+    @foreach (var item in art)
     {
         <li>
             @Html.ActionLink("[  编辑  ]", "Edit", new { id = item.Id }) |
