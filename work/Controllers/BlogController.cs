@@ -29,8 +29,9 @@ namespace work.Controllers
 
 
         public ActionResult AddArticle()
-        {
-            return View();
+        {    if (Request.Cookies["isauth"] != null && Request.Cookies["isauth"].Value == "ture") { return View(); }
+            else { return RedirectToAction("login", "cookie"); }
+            
         }
 
         public ActionResult ArticleSave(BlogArticle model)

@@ -278,6 +278,7 @@
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\Show.cshtml" />
     <Content Include="Views\Cookie\Index.cshtml" />
+    <Content Include="Views\Cookie\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
