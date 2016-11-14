@@ -32,12 +32,16 @@ namespace work.Controllers
             return View();
         }
         public ActionResult Login()
-        { return View(); }
-        public ActionResult PostLogin(string username,string password)
-        { if (username == "yao"&& password == "123")
-            {   var cookie = new HttpCookie("isauth", "true");
+        {
+            return View();
+        }
+        public ActionResult PostLogin(string username, string password)
+        {
+            if (username == "yao" && password == "123")
+            {
+                var cookie = new HttpCookie("isauth", "true");
                 Response.Cookies.Add(cookie);
-                return RedirectToAction("AddArticle","Blog");
+                return RedirectToAction("AddArticle", "Blog");
             }
             return View();
         }
